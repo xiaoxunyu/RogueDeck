@@ -9,4 +9,5 @@ public class HeroData : ScriptableObject
     public int HP;
     public int Attack;
     public int Range;
+    public string Spell1Name;
 }

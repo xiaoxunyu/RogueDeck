@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15f00e1bf1b0e460bba964f6aa885901, type: 3}
-  m_Name: Sniper
+  m_Name: Assassin
   m_EditorClassIdentifier: 
-  Name: Sniper
+  Name: Assassin
   Portrait: {fileID: 0}
-  HP: 12
-  Attack: 2
-  Range: 5
-  Spell1Name: SharpShot 1
+  HP: 10
+  Attack: 6
+  Range: 1
+  Spell1Name: JumpStun 1
