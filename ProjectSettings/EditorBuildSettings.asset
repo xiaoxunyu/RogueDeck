@@ -8,4 +8,25 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/HomeScreen.unity
+    guid: 37559935a05cf2f4383b31f805341125
+  - enabled: 1
+    path: Assets/Scenes/StartingSquadScreen.unity
+    guid: e175216e721740d4ca2462c38f5c8747
+  - enabled: 1
+    path: Assets/Scenes/MapScreen.unity
+    guid: 38781c56189006047bae905d8a7fa71c
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: 534d4ff599a7d9b40afe8bd0266d6dd2
+  - enabled: 1
+    path: Assets/Scenes/Equip.unity
+    guid: 8d2291faeee903b4b83cfed7ae5069dd
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: 6fbe9a1ccad66b049b23420da8450a7c
+  - enabled: 1
+    path: Assets/Scenes/InsideHouse.unity
+    guid: ad84f80c63983ba4293b5b99a4d34b47
   m_configObjects: {}
