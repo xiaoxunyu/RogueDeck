@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
 
-        heroDataList.Add((HeroData)Resources.Load("Sniper"));
-        print(heroDataList[0].Range);
+        foreach(Object hero in Resources.LoadAll("HeroData"))
+            heroDataList.Add((HeroData)hero);
     }
 
     void Update()
