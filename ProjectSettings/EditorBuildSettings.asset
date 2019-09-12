@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle.unity
     guid: 534d4ff599a7d9b40afe8bd0266d6dd2
   - enabled: 1
-    path: Assets/Scenes/Equip.unity
+    path: Assets/Scenes/EquipScene.unity
     guid: 8d2291faeee903b4b83cfed7ae5069dd
   - enabled: 1
     path: Assets/Scenes/City.unity
