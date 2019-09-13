@@ -24,6 +24,7 @@ public class CharacterSelector : MonoBehaviour
     public void SetHero(HeroData hero)
     {
         this.hero = hero;
+        transform.GetComponent<Image>().sprite = hero.Portrait;
         transform.GetChild(0).GetComponent<Text>().text = hero.Name;
     }
 
