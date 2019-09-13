@@ -343,6 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BattleResultPrefab: {fileID: 2383922847553360071, guid: 9704e9d6a636e8c418ab6ebab105f817,
     type: 3}
+  OverallResultPrefab: {fileID: 2383922847553360071, guid: f0e26df2c7b477e45903e00281ded2fb,
+    type: 3}
 --- !u!1 &1628790944
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BattleFightButton : MonoBehaviour
 {
-    public GameObject BattleResultPrefab;
+	public GameObject BattleResultPrefab;
+	public GameObject OverallResultPrefab;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -19,7 +20,11 @@ public class BattleFightButton : MonoBehaviour
     }
 
     public void OnClick()
-    {
-        Instantiate(BattleResultPrefab, GameObject.Find("Canvas").transform);
-    }
+	{
+		GameManager.BattleCount++;
+        if (GameManager.BattleCount < 3)
+    		Instantiate(BattleResultPrefab, GameObject.Find("Canvas").transform);
+		else
+			Instantiate(OverallResultPrefab, GameObject.Find("Canvas").transform);
+	}
 }

@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static List<HeroData> HeroSelected = new List<HeroData>();
     public static List<EquipmentData> EquipmentList = new List<EquipmentData>();
 
+    public static int BattleCount = 0;
+
     static bool inited = false;
 
     void Start()
