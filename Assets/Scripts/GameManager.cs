@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static List<HeroData> HeroUnequipped = new List<HeroData>();
     public static List<HeroData> HeroEquipped = new List<HeroData>();
     public static List<HeroData> HeroSelected = new List<HeroData>();
+    public static List<EquipmentData> EquipmentList = new List<EquipmentData>();
 
     static bool inited = false;
 
@@ -29,6 +30,9 @@ public class GameManager : MonoBehaviour
             HeroEquipped.Add(HeroUnequipped[0]);
             HeroUnequipped.RemoveAt(0);
         }
+
+        foreach (Object equipment in Resources.LoadAll("EquipmentData"))
+            EquipmentList.Add((EquipmentData)equipment);
     }
 
     void Update()
