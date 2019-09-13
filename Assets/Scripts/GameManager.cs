@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static List<HeroData> HeroLocked = new List<HeroData>();
     public static List<HeroData> HeroUnequipped = new List<HeroData>();
     public static List<HeroData> HeroEquipped = new List<HeroData>();
     public static List<HeroData> HeroSelected = new List<HeroData>();
@@ -24,13 +25,13 @@ public class GameManager : MonoBehaviour
         inited = true;
         DontDestroyOnLoad(this);
 
-        foreach(Object hero in Resources.LoadAll("HeroData"))
-            HeroUnequipped.Add((HeroData)hero);
+        foreach (Object hero in Resources.LoadAll("HeroData"))
+            HeroLocked.Add((HeroData)hero);
 
-        for(int i = 0; i < 8; i++)
+        for (int i = 0; i < 8; i++)
         {
-            HeroEquipped.Add(HeroUnequipped[0]);
-            HeroUnequipped.RemoveAt(0);
+            HeroEquipped.Add(HeroLocked[0]);
+            HeroLocked.RemoveAt(0);
         }
 
         foreach (Object equipment in Resources.LoadAll("EquipmentData"))

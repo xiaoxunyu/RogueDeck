@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HomeScreenTabManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class HomeScreenTabManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GameManager.BattleCount >= 3)
+            transform.GetChild(0).GetComponent<Button>().interactable = true;
     }
 
     // Update is called once per frame
