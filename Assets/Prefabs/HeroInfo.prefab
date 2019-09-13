@@ -30,7 +30,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 479941040622865361}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 149}
+  m_AnchoredPosition: {x: 0, y: 123}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4499644479165157755
@@ -241,6 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479941040622865361}
+  - component: {fileID: 3916521646182966790}
   m_Layer: 5
   m_Name: HeroInfo
   m_TagString: Untagged
@@ -259,8 +260,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6438069323972755081}
   - {fileID: 288602464401383945}
+  - {fileID: 6438069323972755081}
   - {fileID: 4722278476320578956}
   - {fileID: 343569421530118393}
   - {fileID: 3531699969994096306}
@@ -279,6 +280,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3916521646182966790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051715277828773960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679b0c9cf1d6cc458f6b16bc8b1c56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero: {fileID: 11400000, guid: 39f81d03b7e7b4843b8b0532b5e0658e, type: 2}
+  attack: {fileID: 8375500560437284891}
+  hp: {fileID: 2745742442820999762}
+  range: {fileID: 1674048333531804761}
+  spell: {fileID: 4708574039007096333}
+  image: {fileID: 7062006301143755759}
 --- !u!1 &1264682371835715456
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +467,7 @@ GameObject:
   - component: {fileID: 6582804173052421550}
   - component: {fileID: 2745742442820999762}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,11 +921,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 479941040622865361}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 240}
+  m_AnchoredPosition: {x: 0, y: 214}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7030046401151888472
@@ -1037,8 +1056,9 @@ GameObject:
   - component: {fileID: 245022100019717109}
   - component: {fileID: 5320633383248677802}
   - component: {fileID: 8375500560437284891}
+  - component: {fileID: 3351256896798813579}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,6 +1203,18 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3351256896798813579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943124465414277494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a56e161282b924fa87401031530f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5208619469112733532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1384,7 @@ GameObject:
   - component: {fileID: 4159506227580309619}
   - component: {fileID: 1674048333531804761}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1666,7 +1698,7 @@ GameObject:
   - component: {fileID: 3464040142373622898}
   - component: {fileID: 4708574039007096333}
   m_Layer: 5
-  m_Name: Text (TMP) (8)
+  m_Name: Spell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
