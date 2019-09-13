@@ -313,7 +313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -481}
+  m_AnchoredPosition: {x: 0, y: -436}
   m_SizeDelta: {x: 294.1, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168539208
@@ -638,6 +638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Character Portrait (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255611822740021163, guid: bd9b19bb84f90fd43bd3291b3fa325bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2595999001194473996, guid: bd9b19bb84f90fd43bd3291b3fa325bb,
         type: 3}
@@ -997,8 +1002,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 161.5}
+  m_SizeDelta: {x: 0, y: 922.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594994635
 MonoBehaviour:
@@ -1050,8 +1055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c71a9e9f4e24d6bb4679267d5c5bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VertBounds: {x: -1, y: 10}
-  HoriBounds: {x: -1, y: 1}
+  VertBounds: {x: -2, y: 2}
+  HoriBounds: {x: 0, y: 0}
 --- !u!1001 &621027702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1689,6 +1694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294591862}
   - component: {fileID: 1294591863}
+  - component: {fileID: 1294591864}
   m_Layer: 0
   m_Name: CharacterPortraitList
   m_TagString: Untagged
@@ -1717,7 +1723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -621}
+  m_AnchoredPosition: {x: 0, y: -575}
   m_SizeDelta: {x: 2137.3, y: 599.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294591863
@@ -1745,6 +1751,18 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &1294591864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294591861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4df6c232e57400f9ac8cdb8e238177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1667882846
 PrefabInstance:
   m_ObjectHideFlags: 0
