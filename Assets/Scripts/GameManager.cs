@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static List<HeroData> HeroDataList = new List<HeroData>();
-    public static List<HeroData> SelectedHeroList = new List<HeroData>();
+    public static List<HeroData> HeroUnequipped = new List<HeroData>();
+    public static List<HeroData> HeroEquipped = new List<HeroData>();
+    public static List<HeroData> HeroSelected = new List<HeroData>();
 
     void Start()
     {
         DontDestroyOnLoad(this);
 
         foreach(Object hero in Resources.LoadAll("HeroData"))
-            HeroDataList.Add((HeroData)hero);
+            HeroUnequipped.Add((HeroData)hero);
+
+        for(int i = 0; i < 8; i++)
+        {
+            HeroEquipped.Add(HeroUnequipped[0]);
+            HeroUnequipped.RemoveAt(0);
+        }
     }
 
     void Update()

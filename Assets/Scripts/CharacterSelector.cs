@@ -33,12 +33,12 @@ public class CharacterSelector : MonoBehaviour
         if (checkMark.activeSelf)
         {
             checkMark.SetActive(false);
-			GameManager.SelectedHeroList.Remove(hero);
+			GameManager.HeroSelected.Remove(hero);
         }
 		else
 		{
 			checkMark.SetActive(true);
-			GameManager.SelectedHeroList.Add(hero);
+			GameManager.HeroSelected.Add(hero);
 		}
     }
 }

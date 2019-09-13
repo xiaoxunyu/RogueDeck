@@ -11,7 +11,7 @@ public class CharacterSelectManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		listToPick = new List<HeroData>(GameManager.HeroDataList);
+		listToPick = new List<HeroData>(GameManager.HeroEquipped);
 
 		for (int i = 0; i < 4; i++)
         {
@@ -30,6 +30,6 @@ public class CharacterSelectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LockTeamButton.interactable = GameManager.SelectedHeroList.Count == 3;
+        LockTeamButton.interactable = GameManager.HeroSelected.Count == 3;
     }
 }

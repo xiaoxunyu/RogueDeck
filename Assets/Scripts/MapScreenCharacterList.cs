@@ -11,9 +11,9 @@ public class MapScreenCharacterList : MonoBehaviour
     {
         for(int i = 0; i < transform.childCount; i++)
         {
-            if (i < GameManager.SelectedHeroList.Count)
+            if (i < GameManager.HeroSelected.Count)
             {
-                HeroData hero = GameManager.SelectedHeroList[i];
+                HeroData hero = GameManager.HeroSelected[i];
                 transform.GetChild(i).GetComponent<Image>().sprite = hero.Portrait;
                 transform.GetChild(i).GetChild(0).GetComponent<TextMeshProUGUI>().text = hero.Name;
             }

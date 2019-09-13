@@ -5,22 +5,14 @@ using UnityEngine.UI;
 
 public class InsideHouseHeroButton : MonoBehaviour
 {
-    public HeroData hero;
-    public GameObject contextMenu;
+    public bool IsEquipped;
     private Image buttonImage;
-
-    private GameObject contextPrefab = null;
+    HeroData hero;
     
     // Start is called before the first frame update
     void Start()
     {
         buttonImage = gameObject.GetComponent<Image>();
-        if (hero != null) {
-            buttonImage.sprite = hero.Portrait;
-        } else {
-            gameObject.SetActive(false);
-        }
-        
     }
 
     // Update is called once per frame
@@ -29,16 +21,26 @@ public class InsideHouseHeroButton : MonoBehaviour
         
     }
 
-    public void OnClick() {
-        Debug.Log("outside");
-        if (contextPrefab == null) {
-            Debug.Log("got here");
-            contextPrefab = Instantiate(contextMenu, this.transform.position, this.transform.rotation) as GameObject;
-            //contextPrefab.transform.parent = gameObject.transform;
-            contextPrefab.transform.SetParent(gameObject.transform, true);
-            contextPrefab.transform.localScale = new Vector3(1, 1, 1);
-            contextPrefab.transform.localPosition= new Vector3(2, -130, 0);
-            contextPrefab.GetComponentInChildren<HeroInfoButton>().myHero = hero; 
+    public void OnClick()
+    {
+        GameObject contextMenuInfo = GameObject.Find("ContextMenuInfo");
+        contextMenuInfo.transform.position = new Vector2(-999, -999);
+        GameObject contextMenuInfoEquip = GameObject.Find("ContextMenuInfoEquip");
+        contextMenuInfoEquip.transform.position = new Vector2(-999, -999);
+        if (IsEquipped) {
+            contextMenuInfo.transform.position = transform.position;
+            contextMenuInfo.GetComponentInChildren<HeroInfoButton>().myHero = hero; 
+        } else
+        {
+            contextMenuInfoEquip.transform.position = transform.position;
+            contextMenuInfoEquip.GetComponentInChildren<HeroInfoButton>().myHero = hero;
         }
+    }
+
+    public void SetHero(HeroData hero, bool isEquipped)
+    {
+        this.hero = hero;
+        buttonImage.sprite = hero.Portrait;
+        IsEquipped = isEquipped;
     }
 }

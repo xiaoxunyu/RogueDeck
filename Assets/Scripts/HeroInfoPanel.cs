@@ -6,21 +6,16 @@ using TMPro;
 
 public class HeroInfoPanel : MonoBehaviour
 {
-    public HeroData hero;
-    public TextMeshProUGUI attack;
-    public TextMeshProUGUI hp;
-    public TextMeshProUGUI range;
-    public TextMeshProUGUI spell;
-    public Image image;
-    
+    public Image Portrait;
+    public TextMeshProUGUI Name;
+    public TextMeshProUGUI Attack;
+    public TextMeshProUGUI Hp;
+    public TextMeshProUGUI Range;
+    public TextMeshProUGUI Spell;
+
     // Start is called before the first frame update
     void Start()
     {
-        attack.text = hero.Attack.ToString();
-        hp.text = hero.HP.ToString();
-        range.text = hero.Range.ToString();
-        spell.text = hero.Spell1Name;
-        image.sprite = hero.Portrait;
 
     }
 
@@ -28,5 +23,15 @@ public class HeroInfoPanel : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetHero(HeroData hero)
+    {
+        Portrait.sprite = hero.Portrait;
+        Name.text = hero.Name;
+        Attack.text = hero.Attack.ToString();
+        Hp.text = hero.HP.ToString();
+        Range.text = hero.Range.ToString();
+        Spell.text = hero.Spell1Name;
     }
 }
