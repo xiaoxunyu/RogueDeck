@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Assassin 1
   m_EditorClassIdentifier: 
   Name: Assassin2
-  Portrait: {fileID: 21300000, guid: 16c81654f4ebb594ba337edc0a7c9256, type: 3}
+  Portrait: {fileID: 21300000, guid: e640f48f8a95ea24d8c7180091c9d267, type: 3}
   HP: 10
   Attack: 6
   Range: 1

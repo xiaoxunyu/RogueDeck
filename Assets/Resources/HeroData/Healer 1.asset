@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Healer 1
   m_EditorClassIdentifier: 
   Name: Healer2
-  Portrait: {fileID: 21300000, guid: 5451b0d2e3ea2e043b8463d10578514d, type: 3}
+  Portrait: {fileID: 21300000, guid: 3d58b154f568d7f4a84c52290b8aff0a, type: 3}
   HP: 18
   Attack: 2
   Range: 3

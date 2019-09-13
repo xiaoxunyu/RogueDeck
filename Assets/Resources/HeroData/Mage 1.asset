@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mage 1
   m_EditorClassIdentifier: 
   Name: Mage2
-  Portrait: {fileID: 21300000, guid: b0cb2036fdfed8240851913ad1baf083, type: 3}
+  Portrait: {fileID: 21300000, guid: 3d9157e5bbde83b4ba3f8e7ad040462c, type: 3}
   HP: 12
   Attack: 2
   Range: 3
