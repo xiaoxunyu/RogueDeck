@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f00e1bf1b0e460bba964f6aa885901, type: 3}
   m_Name: Healer
   m_EditorClassIdentifier: 
-  Name: Healer
+  Name: Ojo'mon
   Portrait: {fileID: 21300000, guid: 5451b0d2e3ea2e043b8463d10578514d, type: 3}
   HP: 18
   Attack: 2
