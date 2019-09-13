@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class InsideHouseHeroButton : MonoBehaviour
 {
     public HeroData hero;
+    public GameObject contextMenu;
     private Image buttonImage;
+
+    private GameObject contextPrefab = null;
     
     // Start is called before the first frame update
     void Start()
@@ -24,5 +27,16 @@ public class InsideHouseHeroButton : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnClick() {
+        Debug.Log("outside");
+        if (contextPrefab == null) {
+            Debug.Log("got here");
+            contextPrefab = Instantiate(contextMenu, this.transform.position, this.transform.rotation) as GameObject;
+            contextPrefab.transform.parent = gameObject.transform;
+            contextPrefab.transform.localScale = new Vector3(1, 1, 1);
+            contextPrefab.transform.localPosition= new Vector3(2, -130, 0);
+        }
     }
 }
