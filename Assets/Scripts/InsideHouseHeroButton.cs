@@ -34,9 +34,11 @@ public class InsideHouseHeroButton : MonoBehaviour
         if (contextPrefab == null) {
             Debug.Log("got here");
             contextPrefab = Instantiate(contextMenu, this.transform.position, this.transform.rotation) as GameObject;
-            contextPrefab.transform.parent = gameObject.transform;
+            //contextPrefab.transform.parent = gameObject.transform;
+            contextPrefab.transform.SetParent(gameObject.transform, true);
             contextPrefab.transform.localScale = new Vector3(1, 1, 1);
             contextPrefab.transform.localPosition= new Vector3(2, -130, 0);
+            contextPrefab.GetComponentInChildren<HeroInfoButton>().myHero = hero; 
         }
     }
 }

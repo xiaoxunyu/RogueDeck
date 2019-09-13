@@ -11,7 +11,7 @@ public class HeroInfoPanel : MonoBehaviour
     public TextMeshProUGUI hp;
     public TextMeshProUGUI range;
     public TextMeshProUGUI spell;
-    public Image image;  
+    public Image image;
     
     // Start is called before the first frame update
     void Start()

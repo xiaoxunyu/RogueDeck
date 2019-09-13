@@ -6,6 +6,7 @@ public class HeroInfoButton : MonoBehaviour
 {
     public GameObject heroInfoPrefab;
     private GameObject myPanel;
+    public HeroData myHero;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class HeroInfoButton : MonoBehaviour
             myPanel  = Instantiate(heroInfoPrefab, this.transform.position, this.transform.rotation) as GameObject;
             myPanel.transform.SetParent(gameObject.transform.root,false);
             //myPanel.transform.localScale = new Vector3(1, 1, 1);
+            myPanel.GetComponentInChildren<HeroInfoPanel>().hero = this.myHero;
         }
 
     }
