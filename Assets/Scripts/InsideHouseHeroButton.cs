@@ -6,12 +6,15 @@ using UnityEngine.UI;
 public class InsideHouseHeroButton : MonoBehaviour
 {
     public bool IsEquipped;
-    private Image buttonImage;
+
+    HouseHeroManager manager;
+    Image buttonImage;
     HeroData hero;
     
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.Find("Canvas").GetComponent<HouseHeroManager>();
         buttonImage = gameObject.GetComponent<Image>();
     }
 
@@ -23,22 +26,26 @@ public class InsideHouseHeroButton : MonoBehaviour
 
     public void OnClick()
     {
-        GameObject contextMenu = GameObject.Find("ContextMenu");
-        contextMenu.transform.position = new Vector2(-999, -999);
-
-        if (GameObject.Find("Canvas").GetComponent<HouseHeroManager>().IsWaitToSwap)
+        if (manager.IsWaitToSwap)
         {
+            manager.IsWaitToSwap = false;
             if (IsEquipped)
-                GameObject.Find("Canvas").GetComponent<HouseHeroManager>().OnClickHeroToSwap(transform.GetSiblingIndex());
+            {
+                manager.OnClickHeroToSwap(transform.GetSiblingIndex());
+            }
+
+            manager.HideContextMenu();
             return;
         }
 
+        manager.HideContextMenu();
         if (IsEquipped)
         { 
             GameObject.Find("HeroInfo").GetComponent<HeroInfoPanel>().SetHero(hero);
         }
         else
         {
+            GameObject contextMenu = GameObject.Find("ContextMenu");
             contextMenu.transform.position = transform.position;
             contextMenu.GetComponentInChildren<HeroInfoButton>().myHero = hero;
             contextMenu.transform.GetChild(0).GetChild(1).GetComponent<Button>().interactable = true;

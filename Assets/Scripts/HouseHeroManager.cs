@@ -47,6 +47,7 @@ public class HouseHeroManager : MonoBehaviour
     {
         GameObject contextMenuInfoEquip = GameObject.Find("ContextMenu");
         contextMenuInfoEquip.transform.position = new Vector2(-999, -999);
+        IsWaitToSwap = false;
     }
 
     public void OnClickEquip()
@@ -62,6 +63,5 @@ public class HouseHeroManager : MonoBehaviour
         GameManager.HeroUnequipped.Remove(GameObject.Find("ContextMenu").GetComponentInChildren<HeroInfoButton>().myHero);
         GameManager.HeroUnequipped.Add(heroToRetire);
         UpdateHeroPool();
-        IsWaitToSwap = false;
     }
 }

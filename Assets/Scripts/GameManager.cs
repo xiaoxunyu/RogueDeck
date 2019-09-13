@@ -8,8 +8,17 @@ public class GameManager : MonoBehaviour
     public static List<HeroData> HeroEquipped = new List<HeroData>();
     public static List<HeroData> HeroSelected = new List<HeroData>();
 
+    static bool inited = false;
+
     void Start()
     {
+        if (inited)
+        {
+            Destroy(this);
+            return;
+        }
+
+        inited = true;
         DontDestroyOnLoad(this);
 
         foreach(Object hero in Resources.LoadAll("HeroData"))
