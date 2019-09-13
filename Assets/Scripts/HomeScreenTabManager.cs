@@ -11,7 +11,7 @@ public class HomeScreenTabManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GameManager.BattleCount >= 3)
+        if (GameManager.UnlockCity)
             transform.GetChild(0).GetComponent<Button>().interactable = true;
     }
 

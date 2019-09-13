@@ -19,8 +19,11 @@ public class Awesome : MonoBehaviour
 
     public void OnClick()
     {
-        GameManager.HeroUnequipped.Add(GameManager.HeroLocked[0]);
-        GameManager.HeroLocked.RemoveAt(0);
+        if (GameManager.HeroLocked.Count > 0)
+        {
+            GameManager.HeroUnequipped.Add(GameManager.HeroLocked[0]);
+            GameManager.HeroLocked.RemoveAt(0);
+        }
         SceneManager.LoadScene("HomeScreen");
     }
 }
