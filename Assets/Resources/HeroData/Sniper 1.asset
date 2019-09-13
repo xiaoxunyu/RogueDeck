@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f00e1bf1b0e460bba964f6aa885901, type: 3}
   m_Name: Sniper 1
   m_EditorClassIdentifier: 
-  Name: Sniper2
+  Name: Starbreeze
   Portrait: {fileID: 21300000, guid: 1af6c3467075e5243af817caa4c5e29b, type: 3}
   HP: 12
   Attack: 2
