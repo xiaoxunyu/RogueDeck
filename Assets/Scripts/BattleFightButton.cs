@@ -25,6 +25,9 @@ public class BattleFightButton : MonoBehaviour
         if (GameManager.BattleCount < 3)
     		Instantiate(BattleResultPrefab, GameObject.Find("Canvas").transform);
 		else
+		{
+			GameManager.UnlockCity = true;
 			Instantiate(OverallResultPrefab, GameObject.Find("Canvas").transform);
+		}
 	}
 }

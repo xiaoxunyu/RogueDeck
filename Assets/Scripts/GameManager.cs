@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static List<EquipmentData> EquipmentList = new List<EquipmentData>();
 
     public static int BattleCount = 0;
+    public static bool UnlockCity = false;
 
     static bool inited = false;
 
