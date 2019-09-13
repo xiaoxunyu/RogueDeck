@@ -22,7 +22,6 @@ public class HeroInfoButton : MonoBehaviour
 
     public void OnClick() {
         GameObject infoPanel = GameObject.Find("HeroInfo");
-        infoPanel.transform.position = Vector3.zero;
         infoPanel.GetComponentInChildren<HeroInfoPanel>().SetHero(myHero);
     }
 }

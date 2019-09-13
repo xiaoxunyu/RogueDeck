@@ -23,17 +23,25 @@ public class InsideHouseHeroButton : MonoBehaviour
 
     public void OnClick()
     {
-        GameObject contextMenuInfo = GameObject.Find("ContextMenuInfo");
-        contextMenuInfo.transform.position = new Vector2(-999, -999);
-        GameObject contextMenuInfoEquip = GameObject.Find("ContextMenuInfoEquip");
-        contextMenuInfoEquip.transform.position = new Vector2(-999, -999);
-        if (IsEquipped) {
-            contextMenuInfo.transform.position = transform.position;
-            contextMenuInfo.GetComponentInChildren<HeroInfoButton>().myHero = hero; 
-        } else
+        GameObject contextMenu = GameObject.Find("ContextMenu");
+        contextMenu.transform.position = new Vector2(-999, -999);
+
+        if (GameObject.Find("Canvas").GetComponent<HouseHeroManager>().IsWaitToSwap)
         {
-            contextMenuInfoEquip.transform.position = transform.position;
-            contextMenuInfoEquip.GetComponentInChildren<HeroInfoButton>().myHero = hero;
+            if (IsEquipped)
+                GameObject.Find("Canvas").GetComponent<HouseHeroManager>().OnClickHeroToSwap(transform.GetSiblingIndex());
+            return;
+        }
+
+        if (IsEquipped)
+        { 
+            GameObject.Find("HeroInfo").GetComponent<HeroInfoPanel>().SetHero(hero);
+        }
+        else
+        {
+            contextMenu.transform.position = transform.position;
+            contextMenu.GetComponentInChildren<HeroInfoButton>().myHero = hero;
+            contextMenu.transform.GetChild(0).GetChild(1).GetComponent<Button>().interactable = true;
         }
     }
 

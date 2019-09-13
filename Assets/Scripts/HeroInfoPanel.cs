@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class HeroInfoPanel : MonoBehaviour
+public class HeroInfoPanel : MonoBehaviour, IPointerDownHandler
 {
     public Image Portrait;
     public TextMeshProUGUI Name;
@@ -27,11 +28,18 @@ public class HeroInfoPanel : MonoBehaviour
 
     public void SetHero(HeroData hero)
     {
+        transform.position = Vector3.zero;
+
         Portrait.sprite = hero.Portrait;
         Name.text = hero.Name;
         Attack.text = hero.Attack.ToString();
         Hp.text = hero.HP.ToString();
         Range.text = hero.Range.ToString();
         Spell.text = hero.Spell1Name;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        transform.position = new Vector2(-999, -999);
     }
 }
