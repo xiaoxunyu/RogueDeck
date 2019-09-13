@@ -289,7 +289,6 @@ GameObject:
   - component: {fileID: 168539210}
   - component: {fileID: 168539209}
   - component: {fileID: 168539208}
-  - component: {fileID: 168539211}
   m_Layer: 5
   m_Name: FightButton
   m_TagString: Untagged
@@ -360,7 +359,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 168539211}
+      - m_Target: {fileID: 0}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -411,18 +410,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168539206}
   m_CullTransparentMesh: 0
---- !u!114 &168539211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168539206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98cd9f675f7ff4a59ba21d7d7430a51d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &190113455
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 692
+      value: 581
       objectReference: {fileID: 0}
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
@@ -1059,7 +1046,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3ee0822de205c864cb1d2a7b8069baa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 612c4366dbcda04479c304942fa924d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1498,7 +1485,7 @@ PrefabInstance:
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 351
+      value: 297
       objectReference: {fileID: 0}
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
@@ -1653,7 +1640,7 @@ PrefabInstance:
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 946
+      value: 801
       objectReference: {fileID: 0}
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
@@ -1739,6 +1726,8 @@ GameObject:
   - component: {fileID: 1294591862}
   - component: {fileID: 1294591863}
   - component: {fileID: 1294591864}
+  - component: {fileID: 1294591866}
+  - component: {fileID: 1294591865}
   m_Layer: 0
   m_Name: CharacterPortraitList
   m_TagString: Untagged
@@ -1807,6 +1796,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4df6c232e57400f9ac8cdb8e238177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1294591865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294591861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ea53fbd852d42d4478e68ef9a3199394, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1294591866
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294591861}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1667882846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2342,7 +2369,7 @@ PrefabInstance:
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -362
+      value: -298
       objectReference: {fileID: 0}
     - target: {fileID: 8066858664660861260, guid: e30d4444e7f2a2a459910b47f8f082d7,
         type: 3}
